@@ -71,17 +71,30 @@ s_node* search(s_node* head, char* searchTerm) {
 	}
 
 	return runner;
+}
+void delete(s_node* head, char* searchTerm) {
+	printf("Search for %s to be deleted\n", searchTerm);
 
+	s_node* runner = head->next;
 
-	// find last but one node
-	//s_node* runner = head;
-	//while (runner->next->next != NULL) {
-	//	runner = runner->next;
-	//}
-	//s_node* tail = runner->next;
-	//runner->next = (s_node*)malloc(sizeof(s_node));
-	//runner = runner->next;
-	//runner->next = tail;
-	//runner->content = (char*)malloc(sizeof(char) * (strlen(newContent) + 1));
-	//strcpy(runner->content, newContent);
+	while (runner->next != NULL)
+	{
+		if (runner->content != NULL && strcmp(runner->content, searchTerm) == 0)
+		{
+			runner->content = NULL;
+			runner = NULL;
+			return;
+		}
+		else if (strcmp(runner->next->content, searchTerm) == 0)
+		{
+			printf("deleting %s \n" + *runner->next->content);
+			s_node* toBeDeleted = runner->next;
+			runner->next = runner->next->next;
+			free(toBeDeleted->content);
+			free(toBeDeleted);
+			break;
+		}
+		runner = runner->next;
+	}
+
 }

@@ -29,5 +29,5 @@ void print(s_node* head);
 void clear(s_node* head);
 
 s_node* search(s_node* head, char* searchTerm);
-s_node* search(s_node* head, char* searchTerm);
+void delete(s_node* head, char* searchTerm);
 #endif

@@ -8,7 +8,11 @@ int main(int argc, char* argv[]) {
 	add(list, "Asd");
 	s_node* result = search(list, "Asd");
 	printf("Found: %s\n", result->content);
-	//add(list, " ");
+	delete(list, "Hello");
+	delete(list, "Asd");
+
+	add(list, " ");
+	delete(list, " ");
 	//add(list, "world");
 	//print(list);
 	//clear(list);
