@@ -57,7 +57,7 @@ void clear(s_node* head) {
 }
 
 s_node* search(s_node* head, char* searchTerm) {
-	printf("Searching for %s", searchTerm);
+	printf("Searching for %s\n", searchTerm);
 	s_node* runner = head;
 	s_node* result = NULL;
 	while (runner->next != NULL)
@@ -69,6 +69,7 @@ s_node* search(s_node* head, char* searchTerm) {
 		}
 		runner = runner->next;
 	}
+
 	return runner;
 
 
