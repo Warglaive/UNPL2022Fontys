@@ -1,5 +1,7 @@
 #include "arraydatastore.h"
-#include "stdio.h"
 int main() {
 	print(" ");
+}
+bool insert(char* str) {
+		
 }
