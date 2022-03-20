@@ -6,9 +6,7 @@
 char** matrix;
 void init(int col) {
 	//check if init
-	matrix[2][3] ;
-
-	char matA[row][5] = { {"asd" } ,{"asd" } };
+	//char matrix[row][5] = { {"asd" } ,{"asd" } };
 	/*matrix[row] = (char*)malloc(row * sizeof(char));
 	matrix[0][1] = { {"asd","dsa"} };*/
 	//matrix[col] = (char*)malloc(col * sizeof(char));
