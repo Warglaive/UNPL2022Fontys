@@ -1,7 +1,4 @@
-#include "arraydatastore.h"
 int main() {
-	print(" ");
-}
-bool insert(char* str) {
-		
+	int stringsCount = 4;
+	init(stringsCount);
 }

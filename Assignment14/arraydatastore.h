@@ -1,4 +1,3 @@
-#include "stdio.h"
 #include "stdbool.h"
 void init(int n);
 /* pre : n>0
