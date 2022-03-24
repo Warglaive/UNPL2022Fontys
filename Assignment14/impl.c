@@ -5,18 +5,15 @@
 
 char** matrix;
 void init(int col) {
-	//check if init
-	//char matrix[row][col];
-	char matrix[row][5] = { {"asd" } ,{"asd" } };
-	/*matrix[row] = (char*)malloc(row * sizeof(char));
-	matrix[0][1] = { {"asd","dsa"} };*/
-	//matrix[col] = (char*)malloc(col * sizeof(char));
-	//init with for loops
-	/*for (int i = 0; i < row; i++)
+
+	char** matrix = (char**)malloc(row * sizeof(char*));
+
+	for (int rowCounter = 0; rowCounter < row; rowCounter++)
 	{
-		for (int j = 0; j < col; j++)
+		matrix[rowCounter] = malloc(col * sizeof(char));
+
+		/*for (int colCounter = 0; colCounter < col; colCounter++)
 		{
-			matrix[i] = { "a","b"};
-		}
-	}*/
+		}*/
+	}
 }
