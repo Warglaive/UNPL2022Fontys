@@ -1,9 +1,11 @@
 #include "arraydatastore.h"
+#include <stdio.h>
+#include <stdlib.h>
 #define row 40
 
 char** matrix;
-void init(int col) {
-	if (col <= 0)
+void init(int n) {
+	if (n <= 0)
 	{
 		printf("col has to be > 0!");
 		return;
@@ -12,9 +14,9 @@ void init(int col) {
 
 	for (int rowCounter = 0; rowCounter < row; rowCounter++)
 	{
-		matrix[rowCounter] = malloc(col * sizeof(char));
+		matrix[rowCounter] = malloc(n * sizeof(char));
 	}
-	printf("Matrix initialized (Memory allocated)\n");
+	printf("Matrix initialized (Memory Allocated)\n");
 
 }
 void destroy() {
@@ -22,10 +24,10 @@ void destroy() {
 	   post: allocated memory de-allocated
 	*/
 	//char** matrix = (char**)malloc(row * sizeof(char*));
-
+	free(matrix[row]);
 	for (int rowCounter = 0; rowCounter < sizeof(matrix); rowCounter++)
 	{
-		matrix[rowCounter] = malloc(col * sizeof(char));
+		free(matrix[rowCounter]);
 	}
 
 	printf("Matrix Destroyed (Memory DeAllocated)\n");

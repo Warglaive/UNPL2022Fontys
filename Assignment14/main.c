@@ -1,6 +1,6 @@
-#include "arraydatastore.h";
+#include "arraydatastore.h"
 int main() {
 	int stringsCount = 4;
 	init(stringsCount);
-
+	destroy();
 }
