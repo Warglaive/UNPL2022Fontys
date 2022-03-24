@@ -5,12 +5,6 @@
 
 char** matrix;
 void init(int col) {
-	int** mat = (int**)malloc(row * sizeof(int*));
-	for (int i = 0; i < row; i++) {
-		mat[i] = (int*)malloc(col * sizeof(int));
-	}
-
-	////////////
 	char** matrix = (char**)malloc(row * sizeof(char*));
 
 	for (int rowCounter = 0; rowCounter < row; rowCounter++)
