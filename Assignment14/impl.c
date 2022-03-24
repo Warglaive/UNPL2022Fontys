@@ -24,11 +24,12 @@ void destroy() {
 	   post: allocated memory de-allocated
 	*/
 	//char** matrix = (char**)malloc(row * sizeof(char*));
-	free(matrix[row]);
-	for (int rowCounter = 0; rowCounter < sizeof(matrix); rowCounter++)
-	{
-		free(matrix[rowCounter]);
-	}
+	//for (int rowCounter = 0; rowCounter < sizeof(matrix); rowCounter++)
+	//{
+	//	printf("in %d", rowCounter);
+	//	//free(matrix[rowCounter]);
+	//}
+	free(matrix);
 
 	printf("Matrix Destroyed (Memory DeAllocated)\n");
 
