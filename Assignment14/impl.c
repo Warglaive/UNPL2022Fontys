@@ -1,6 +1,7 @@
 #include "arraydatastore.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define row 40
 
 char** matrix;
@@ -39,16 +40,23 @@ bool insert(char* str) {
    post: string STR stored in an available free storage slot and 1
 		 returned, or 0 returned if there are no free storage slots.
 */
+	int length = strlen(str);
+	printf("%d", length);
 	if (strcmp(str, "") == 0)
 	{
 		printf("Null not accepted");
-		return;
+		return 1;
 	}
-	int length = sizeof(str);
-	if (strcmp(str[length - 1], "\0") == 0)
+
+	if (strcmp(str[length - 1], "\\0") == 0)
 	{
 		//continue
+		for (int i = 0; i < length; i++)
+		{
 
+		}
+
+		//
 	}
 	else {
 		printf("sentinel not present.");
