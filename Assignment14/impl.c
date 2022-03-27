@@ -48,11 +48,10 @@ bool insert(char* str) {
 	{
 		for (int i = 0; i < matrixLength; i++)
 		{
-
+			// dynamically allocate enough space to store the the string, store the 
+			// pointer to this block of memory in strings[i]
+			strings[i] = malloc(matrixLength * sizeof(char));
 		}
 	}
-	// dynamically allocate enough space to store the the string, store the 
-	// pointer to this block of memory in strings[i]
-	strings[i] = malloc(matrixLength * sizeof(char));
 }
 
