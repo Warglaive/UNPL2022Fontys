@@ -5,5 +5,7 @@ int main() {
 	insert("1");
 	insert("2");
 	print();
+	deleteStr("1");
+	print();
 	//destroy();
 }

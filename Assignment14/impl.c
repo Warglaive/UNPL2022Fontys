@@ -51,7 +51,7 @@ bool insert(char* str) {
 	for (int i = insertCounter; i < row; i++)
 	{
 		//if last element is reached - return;
-		if (*strings[i] == '\0')
+		if (strings[i] == '\0')
 		{
 			return;
 		}
@@ -62,13 +62,6 @@ bool insert(char* str) {
 		insertCounter++;
 		return;
 
-		/*else if (*strings[i] != NULL && i < row - 1) {
-			i++;
-			strings[i] = malloc(strLength * sizeof(char));
-			strcpy(strings[i], str);
-			insertCounter++;
-			return;
-		}*/
 	}
 }
 void print() {
@@ -77,6 +70,20 @@ void print() {
 	{
 		printf("Index: %d = %s\n", i, strings[i]);
 	}
-
 }
-
+/// <summary>
+///	Arrays in C are allocated as a fixed number of contiguous elements. 
+/// There is no way to actually remove the memory used by an individual element 
+/// in the array but the elements can be shifted to fill the hole made by removing an element.
+/// </summary>
+/// <param name="str"></param>
+void deleteStr(char* str) {
+	for (int i = 0; i < insertCounter; i++)
+	{
+		if (strcmp(strings[i], str) == 0)
+		{
+			strings[i] = i + 1;
+			insertCounter--;
+		}
+	}
+}
