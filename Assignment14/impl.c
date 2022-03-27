@@ -53,14 +53,14 @@ bool insert(char* str) {
 		//if last element is reached - return;
 		if (strings[i] == '\0')
 		{
-			return;
+			return 0;
 		}
 		// dynamically allocate enough space to store the the string, store the 
 		// pointer to this block of memory in strings[i]
 		strings[i] = malloc(strLength * sizeof(char));
 		strcpy(strings[i], str);
 		insertCounter++;
-		return;
+		return 1;
 
 	}
 }
