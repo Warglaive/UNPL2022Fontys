@@ -66,10 +66,14 @@ bool insert(char* str) {
 }
 void print() {
 	//PRINT Added values for test purposes
-	for (int i = 0; i < insertCounter; i++)
+	if (strings != NULL)
 	{
-		printf("Index: %d = %s\n", i, strings[i]);
+		for (int i = 0; i < insertCounter; i++)
+		{
+			printf("String at Index: %d = %s\n", i, strings[i]);
+		}
 	}
+
 }
 /// <summary>
 ///	Arrays in C are allocated as a fixed number of contiguous elements. 
@@ -83,7 +87,6 @@ void deleteStr(char* str) {
 		if (strcmp(strings[i], str) == 0)
 		{
 			strcpy(strings[i], strings[i + 1]);
-			//strings[i] = i + 1;
 			insertCounter--;
 		}
 	}
