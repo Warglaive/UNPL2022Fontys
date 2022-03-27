@@ -40,14 +40,15 @@ bool insert(char* str) {
    post: string STR stored in an available free storage slot and 1
 		 returned, or 0 returned if there are no free storage slots.
 */
-	int length = strlen(str);
+	malloc(strlen(str)+1);
+	int length = strlen(str) - 1;
 	printf("%d", length);
 	if (strcmp(str, "") == 0)
 	{
 		printf("Null not accepted");
 		return 1;
 	}
-
+	char lastChar = str[length]+1;
 	if (strcmp(str[length - 1], "\\0") == 0)
 	{
 		//continue
