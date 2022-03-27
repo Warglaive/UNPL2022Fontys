@@ -1,0 +1,4 @@
+Matrix initialized (Memory Allocated)
+String at Index: 0 = 1
+String at Index: 1 = 2
+String at Index: 0 = 2
