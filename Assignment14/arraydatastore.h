@@ -1,4 +1,6 @@
 #include "stdbool.h"
+#define _CRT_SECURE_NO_WARNINGS 1
+
 void init(int n);
 /* pre : n>0
    post: an in-memory data storage for n strings created

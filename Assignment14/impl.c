@@ -51,6 +51,7 @@ bool insert(char* str) {
 			// dynamically allocate enough space to store the the string, store the 
 			// pointer to this block of memory in strings[i]
 			strings[i] = malloc(matrixLength * sizeof(char));
+			strcpy(strings[i], str);
 		}
 	}
 }
