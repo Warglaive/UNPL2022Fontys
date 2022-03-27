@@ -43,31 +43,10 @@ void destroy() {
 post: string STR stored in an available free storage slot and 1
 	  returned, or 0 returned if there are no free storage slots.
 */
+int insertCounter = 0;
 bool insert(char* str) {
 
-	int inputLength = strlen(str);
-	strings[0] = malloc(inputLength * sizeof(char));
-	strcpy(strings[0], "1");
-
-	strings[1] = malloc(inputLength * sizeof(char));
-	strcpy(strings[1], "2");
-
-	strings[2] = malloc(inputLength * sizeof(char));
-	strcpy(strings[2], "3");
-
-	strings[3] = malloc(inputLength * sizeof(char));
-	strcpy(strings[3], "4");
-
-	for (int i = 0; i < col; i++)
-	{
-		printf("%s", strings[i]);
-
-	}
-
-
-
-
-
+	int strLength = strlen(str);
 
 	for (int i = 0; i < row; i++)
 	{
@@ -80,10 +59,17 @@ bool insert(char* str) {
 		{
 			// dynamically allocate enough space to store the the string, store the 
 			// pointer to this block of memory in strings[i]
-			strings[i] = malloc(inputLength * sizeof(char));
+			strings[i] = malloc(strLength * sizeof(char));
 			strcpy(strings[i], str);
 		}
-
+	}
+	insertCounter++;
+}
+void print() {
+	//PRINT Added values for test purposes
+	for (int i = 0; i < insertCounter; i++)
+	{
+		printf("%s", strings[i]);
 	}
 
 }

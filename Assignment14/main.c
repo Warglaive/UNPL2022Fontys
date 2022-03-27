@@ -2,6 +2,8 @@
 int main() {
 	int stringsCount = 5;
 	init(stringsCount);
-	insert("test");
+	insert("1");
+	insert("2");
+	print();
 	//destroy();
 }
