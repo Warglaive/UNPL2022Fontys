@@ -82,7 +82,8 @@ void deleteStr(char* str) {
 	{
 		if (strcmp(strings[i], str) == 0)
 		{
-			strings[i] = i + 1;
+			strcpy(strings[i], strings[i + 1]);
+			//strings[i] = i + 1;
 			insertCounter--;
 		}
 	}
