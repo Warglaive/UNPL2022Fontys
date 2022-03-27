@@ -12,7 +12,7 @@ void init(int n) {
 		printf("col has to be > 0!");
 		return;
 	}
-	strings = (char**)malloc(row * sizeof(char*));
+	strings = malloc(row * sizeof(char*));
 
 	for (int rowCounter = 0; rowCounter < row; rowCounter++)
 	{
@@ -43,30 +43,16 @@ post: string STR stored in an available free storage slot and 1
 */
 bool insert(char* str) {
 
-	int length = strlen(str);
-
-	char* inputDynAlloc = malloc(length * sizeof(char));
-	inputDynAlloc[length] = '0';
-	printf("%s", *inputDynAlloc);
-	if (strcmp(str, "") == 0)
+	int matrixLength = strlen(str);
+	if (matrixLength > 0)
 	{
-		printf("Null not accepted");
-		return 1;
-	}
-	char lastChar = str[length];
-	if (strcmp(str[length - 1], "\\0") == 0)
-	{
-		//continue
-		for (int i = 0; i < length; i++)
+		for (int i = 0; i < matrixLength; i++)
 		{
 
 		}
-
-		//
 	}
-	/*else {
-		printf("sentinel not present.");
-		return;
-	}*/
+	// dynamically allocate enough space to store the the string, store the 
+	// pointer to this block of memory in strings[i]
+	strings[i] = malloc(matrixLength * sizeof(char));
 }
 
