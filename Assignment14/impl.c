@@ -6,6 +6,7 @@
 // used to store a dynamically allocated array of pointers to char
 
 char** strings;
+
 void init(int n) {
 	if (n <= 0)
 	{
@@ -43,15 +44,24 @@ post: string STR stored in an available free storage slot and 1
 */
 bool insert(char* str) {
 
-	int matrixLength = strlen(str);
-	if (matrixLength > 0)
+	int inputLength = strlen(strings);
+	if (inputLength > 0)
 	{
-		for (int i = 0; i < matrixLength; i++)
+		for (int i = 0; i < row; i++)
 		{
-			// dynamically allocate enough space to store the the string, store the 
-			// pointer to this block of memory in strings[i]
-			strings[i] = malloc(matrixLength * sizeof(char));
-			strcpy(strings[i], str);
+			//if last element is reached - return;
+			if (strings[i] == '\0')
+			{
+				return;
+			}
+			else
+			{
+				// dynamically allocate enough space to store the the string, store the 
+				// pointer to this block of memory in strings[i]
+				strings[i] = malloc(inputLength * sizeof(char));
+				strcpy(strings[i], str);
+			}
+
 		}
 	}
 }
