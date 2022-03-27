@@ -48,36 +48,34 @@ bool insert(char* str) {
 
 	int strLength = strlen(str);
 
-	for (int i = 0; i < row; i++)
+	for (int i = insertCounter; i < row; i++)
 	{
 		//if last element is reached - return;
 		if (*strings[i] == '\0')
 		{
 			return;
 		}
-		else if (*strings[i] == NULL)
-		{
-			// dynamically allocate enough space to store the the string, store the 
-			// pointer to this block of memory in strings[i]
-			strings[i] = malloc(strLength * sizeof(char));
-			strcpy(strings[i], str);
-			insertCounter++;
-			return;
-		}
-		else if (*strings[i] != NULL && i < row - 1) {
+		// dynamically allocate enough space to store the the string, store the 
+		// pointer to this block of memory in strings[i]
+		strings[i] = malloc(strLength * sizeof(char));
+		strcpy(strings[i], str);
+		insertCounter++;
+		return;
+
+		/*else if (*strings[i] != NULL && i < row - 1) {
 			i++;
 			strings[i] = malloc(strLength * sizeof(char));
 			strcpy(strings[i], str);
 			insertCounter++;
 			return;
-		}
+		}*/
 	}
 }
 void print() {
 	//PRINT Added values for test purposes
 	for (int i = 0; i < insertCounter; i++)
 	{
-		printf("Index: %d = %s\n",i, strings[i]);
+		printf("Index: %d = %s\n", i, strings[i]);
 	}
 
 }
