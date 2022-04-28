@@ -1,4 +1,5 @@
-#include "arraydatastore.h"
+//#include <check.h>
+
 int main() {
 	int stringsCount = 5;
 	init(stringsCount);
