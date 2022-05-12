@@ -1,0 +1,6 @@
+#include "arraydatastore.h"
+#test api_test
+	ck_assert_int_eq(insert("a"), 1);
+	ck_assert_str_str_eq("hello", "hallo");
+	
+	
